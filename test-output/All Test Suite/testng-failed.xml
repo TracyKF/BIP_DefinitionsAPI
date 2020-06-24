@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <test thread-count="5" name="C:/GitHub/DefinitionsAPI(failed)">
+    <classes>
+      <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest">
+        <methods>
+          <include name="apiReportsAllCountTest"/>
+        </methods>
+      </class> <!-- restAssuredDefinitionsAPITest.API_ReportsAllTest -->
+    </classes>
+  </test> <!-- C:/GitHub/DefinitionsAPI(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

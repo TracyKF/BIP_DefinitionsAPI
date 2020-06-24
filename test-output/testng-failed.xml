@@ -1,0 +1,84 @@
+package restAssuredDefinitionsAPITest;
+
+/*
+ *  https://metadata.uw.edu/KNApi/List/Glossary - returns groups of terms
+ *  https://metadata.uw.edu/api/reports/all -   returns all reports with report UI
+ *  https://metadata.uw.edu/api/reports/terms/{report UID} -  returns all terms related to report UI
+ *  https://metadata.uw.edu/Catalog/ViewItem/Term/{ParentUid UID} - loads page in KN for term
+ *   and pass that as a parameter in my test method. This will resolve the issue of when the array order changes.
+ *
+ * https://stackoverflow.com/questions/44716665/full-json-match-with-restassured
+ *
+ *
+ * */
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.parsing.Parser;
+import io.restassured.response.Response;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static io.restassured.RestAssured.given;
+
+public class API_ReportsAllTest_Refactored3 {
+    int sizeOfList = 115;
+
+    @BeforeClass
+    public Response doGetRequest() {
+        RestAssured.defaultParser = Parser.JSON;
+        return
+                given().headers("ContentType", ContentType.JSON, "Accepts", ContentType.JSON)
+                        .when().get("https://metadata.uw.edu/api/reports/all")
+                        .then().statusCode(200).and().contentType(ContentType.JSON).extract().response();
+    }
+
+/*    TODO - REFACTOR 2:  Create a method to hold response in Json array as in tests below and replace code in tests with the method.
+
+        OR:  Huai's - compare stored json files for Refactor 2:
+ *      https://stackoverflow.com/questions/44716665/full-json-match-with-restassured
+      */
+
+        // Method to store the Key and Value for Uid and Title in Map.
+        public Map<String, String> reportUIDsAndTitles() {
+        Response response = doGetRequest();
+        Gson gson = new Gson();
+        JsonArray myElement = gson.fromJson(response.asString(), JsonArray.class);
+
+        // Map to hold the actual values.
+        Map<String, String> actuals = new HashMap<>();
+
+        // The ForEach loop will get values from Map.
+        for (JsonElement element : myElement) {
+            JsonObject obj = element.getAsJsonObject();
+            String uidString = obj.get("Uid").getAsString();
+            String titleString = obj.get("Title").getAsString();
+            //int index = o
+            //populates Map with actual values.
+            actuals.put(uidString, titleString);
+        }
+        return actuals;
+    }
+
+    @Test
+    public void Scratch() {
+        reportUIDsAndTitles();
+       // Assert.assertEquals(reportUIDsAndTitles().get("97d17dbd-9c3b-46aa-ae0e-39603a32250f"), reportUIDsAndTitles().containsValue("100 Percent Sponsor-Funded Faculty"));
+        System.out.println(reportUIDsAndTitles().containsKey("97d17dbd-9c3b-46aa-ae0e-39603a32250f"));
+        System.out.println(reportUIDsAndTitles().containsValue("100 Percent Sponsor-Funded Faculty"));
+
+       // Assert.assertEquals(reportUIDsAndTitles().containsKey("97d17dbd-9c3b-46aa-ae0e-39603a32250f"), reportUIDsAndTitles().containsValue("100 Percent Sponsor-Funded Faculty"));
+        Assert.assertEquals(reportUIDsAndTitles().containsKey("97d17dbd-9c3b-46aa-ae0e-39603a32250f"), reportUIDsAndTitles().containsValue("Advance Budget Number Report"));
+    }
+
+
+
+}

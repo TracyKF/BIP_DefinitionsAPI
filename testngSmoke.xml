@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/GitHub/DefinitionsAPI">
+        <classes>
+            <class name="restAssuredDefinitionsAPITest.API_KN_GlossaryTest">
+                <methods>
+                    <include name="apiStatusCode200"/>
+                    <include name="apiStatusCodeNot404"/>
+                    <include name="apiStatusCodeNot500"/>
+                </methods>
+            </class>
+            <class name="restAssuredDefinitionsAPITest.API_ReportTermsTest">
+                <methods>
+                    <include name="apiStatusCode200Test"/>
+                    <include name="apiStatusCodeNot500Test"/>
+                </methods>
+            </class>
+            <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest">
+                <methods>
+                    <include name="apiStatusCode200"/>
+                    <include name="apiStatusCodeNot404"/>
+                    <include name="apiStatusCodeNot500"/>
+                    <include name="apiReportsAllCount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
