@@ -96,7 +96,7 @@ public class API_ReportsAllTest_Refactored {
         return uIDTitleValues;
     }
 
-    @Test(priority = 3)
+    @Test
     public void api100PercentSponsorFundedFaculty() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -120,7 +120,8 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-    @Test
+/*    TEMPLATE
+@Test
     public void apiXXX() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -131,7 +132,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(keyValue, "XXX", "Report Title not found.");
             }
         }
-    }
+    }*/
     @Test
     public void apiAffixedPaymentDetail() {
         Map<String, String> pairs;

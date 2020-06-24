@@ -16,7 +16,7 @@
                     <include name="apiStatusCodeNot500Test"/>
                 </methods>
             </class>
-            <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest">
+            <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest_Refactored">
                 <methods>
                     <include name="apiStatusCode200"/>
                     <include name="apiStatusCodeNot404"/>

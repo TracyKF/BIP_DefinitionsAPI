@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/GitHub/DefinitionsAPI">
+    <test verbose="2" preserve-order="true" name="C:/GitHub_UW/BIP_DefinitionsAPI">
         <classes>
             <class name="restAssuredDefinitionsAPITest.API_KN_GlossaryTest">
                 <methods>
@@ -27,7 +27,6 @@
                     <include name="apiStatusCode200Test"/>
                     <include name="apiStatusCodeNot500Test"/>
                     <include name="lOOPercentSponsorFundedFaculty"/>
-                    <include name="Twenty13BaseYearPaidFTEReport"/>
                     <include name="AdvanceBudgetNumberReport"/>
                     <include name="AffixedPaymentDetail"/>
                     <include name="AidAuthorizedandDisbursedbyYear"/>
@@ -43,7 +42,6 @@
                     <include name="ClassListByCurriculumCourseSection"/>
                     <include name="CollegeSpaceDatabyFacility"/>
                     <include name="CollegeSpaceDatabyOrgCode"/>
-                    <include name="AcademicOrganizationHierarchy"/>
                     <include name="ConsolidatedBudgetStatusReportMenu"/>
                     <include name="ContactInformationForUnmetRequest"/>
                     <include name="CostShareCommitmentsandContributions"/>
@@ -98,6 +96,7 @@
                     <include name="InternalandExternalSalesSummaryReport"/>
                     <include name="JournalVoucherDetail"/>
                     <include name="LearningSpacesPolicy"/>
+                    <include name="FacultyOnLeave"/>
                     <include name="FECDashboardActionListLegacy"/>
                     <include name="GLReconcilingReport"/>
                     <include name="GrantandContractCertificationReportLegacy"/>
@@ -131,7 +130,6 @@
                     <include name="StudyAbroadStudents"/>
                     <include name="SupplierSearch"/>
                     <include name="TimeScheduleInformation"/>
-                    <include name="MajorsCreditsDegreesByCollege"/>
                     <include name="TransactionSummarybyOrgCode"/>
                     <include name="UndergraduateDegreeApplicants"/>
                     <include name="UndergraduatesEligibletoRegister"/>
@@ -147,7 +145,7 @@
                     <include name="apiTerms_xxxTest"/>
                 </methods>
             </class>
-            <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest">
+            <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest_Refactored">
                 <methods>
                     <include name="apiStatusCode200"/>
                     <include name="apiStatusCodeNot404"/>
@@ -155,10 +153,10 @@
                     <include name="apiReportsAllCount"/>
                     <include name="api100PercentSponsorFundedFaculty"/>
                     <include name="apiAdvanceBudgetNumberReport"/>
-                    <include name="apiAffixedPaymentDetailTest"/>
+                    <include name="apiAffixedPaymentDetail"/>
                     <include name="apiAidAuthorizedandDisbursedbyYear"/>
                     <include name="apiAidAuthorizedandDisbursedbyQuarter"/>
-                    <include name="apiAllApplicationsTest"/>
+                    <include name="apiAllApplications"/>
                     <include name="apiBienniumToDateBudgetBalances"/>
                     <include name="apiBudgetSummaryByOrgCode"/>
                     <include name="apiBudgetTypeClassMatrix"/>
@@ -166,17 +164,16 @@
                     <include name="apiBuildingSummarybyPrimaryUse"/>
                     <include name="apiCampusApplicationCountsComparison"/>
                     <include name="apiCashierActivityReport"/>
-                    <include name="apiClassListByCurriculumCourseSectionTest"/>
+                    <include name="apiClassListByCurriculumCourseSection"/>
                     <include name="apiCollegeSpaceDatabyFacility"/>
                     <include name="apiCollegeSpaceDatabyOrgCode"/>
                     <include name="apiConsolidatedBudgetStatusReportMenu"/>
                     <include name="apiContactInformationForUnmetRequest"/>
                     <include name="apiCostShareCommitmentsandContributions"/>
-                    <include name="apiCourseSectionFillRatesTest"/>
+                    <include name="apiCourseSectionFillRates"/>
                     <include name="apiCurrentApplicationCountbyDepartmentandMajor"/>
                     <include name="apiCurrentStudentInformation"/>
                     <include name="apiCurrentStudentInformationByMajor"/>
-                    <include name="apiCurrentStudentInformationByMinor"/>
                     <include name="apiCurrentStudentRegistrationCourses"/>
                     <include name="apiCurrentStudentTranscriptCourses"/>
                     <include name="apiCurrentStudentTranscriptQuarterlySummary"/>
@@ -192,7 +189,7 @@
                     <include name="apiExpenseandRevenueTransferReport"/>
                     <include name="apiFacilityInformation"/>
                     <include name="apiFacilityRoomDetail"/>
-                    <include name="apiFacultyEffortCertificationFECDashboard"/>
+                    <include name="apiFacultyEffortCertification"/>
                     <include name="apiFASBatchSummaryReport"/>
                     <include name="apiFECDashboardActionList"/>
                     <include name="apiFECDashboardReportbyFECCycle"/>
@@ -207,6 +204,7 @@
                     <include name="apiGiftBalanceDetailbySpendingRestrictionandOrgCode"/>
                     <include name="apiGiftBalanceSummarybySpendingRestriction"/>
                     <include name="apiGLSummaryReport"/>
+                    <include name="apiGLTransactionsbyMonth"/>
                     <include name="apiGrantandContractBudgetStatusReport"/>
                     <include name="apiGrantandContractCertificationReport"/>
                     <include name="apiGrantandContractDeficitReport"/>
@@ -218,7 +216,7 @@
                     <include name="apiHowManyStudentsByCampus"/>
                     <include name="apiHowManyStudentsByCollege"/>
                     <include name="apiHowManyStudentsByDepartment"/>
-                    <include name="apiHowManyStudentsListTest"/>
+                    <include name="apiHowManyStudentsList"/>
                     <include name="apiImmunizationReport"/>
                     <include name="apiIndirectCostRecoveryEstimator"/>
                     <include name="apiInternalandExternalSalesSummaryReport"/>
@@ -227,6 +225,7 @@
                     <include name="apiFECDashboardActionListLegacy"/>
                     <include name="apiGLReconcilingReport"/>
                     <include name="apiGrantandContractCertificationReportLegacy"/>
+                    <include name="apiEmployeeSearch"/>
                     <include name="apiMajorCodes"/>
                     <include name="apiMinorCodes"/>
                     <include name="apiMiscellaneousStudentAccountsNontuitionChargeSummary"/>
@@ -259,6 +258,7 @@
                     <include name="apiTimeScheduleInformation"/>
                     <include name="apiTransactionSummarybyOrgCode"/>
                     <include name="apiUndergraduateDegreeApplicants"/>
+                    <include name="apiUndergraduateTranscriptCourseSearchbyMajor"/>
                     <include name="apiUndergraduatesEligibletoRegister"/>
                     <include name="apiUseTaxBienniumSummary"/>
                     <include name="apiVariableReportingPeriodBudgetSummary"/>

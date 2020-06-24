@@ -9,30 +9,33 @@ package restAssuredDefinitionsAPITest;
 import org.hamcrest.core.IsNull;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class API_KN_GlossaryTest {
 
     // Site tests
-    @Test
+    @Test(priority = 1)
     public void apiStatusCode200() {
         int code = get("https://metadata.uw.edu/KNApi/List/Glossary").getStatusCode();
         Assert.assertEquals(code, 200);
     }
-    @Test
+
+    @Test(priority = 1)
     public void apiStatusCodeNot404() {
         int code = get("https://metadata.uw.edu/KNApi/List/Glossary").getStatusCode();
         Assert.assertNotEquals(code, 404);
     }
-    @Test
+
+    @Test(priority = 1)
     public void apiStatusCodeNot500() {
         int code = get("https://metadata.uw.edu/KNApi/List/Glossary").getStatusCode();
         Assert.assertNotEquals(code, 500);
     }
 
     // Section tests
-    @Test
+    @Test(priority = 2)
     public void apiAcademicPersonnelReportingTerms() {
         given()
                 .when()
@@ -43,7 +46,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[0]", equalTo("Academic Personnel Reporting Terms"))
                 .assertThat().body("ShortDefinition[0]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiCommonDataSet() {
         given()
                 .when()
@@ -54,7 +58,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[1]", equalTo("Common Data Set"))
                 .assertThat().body("ShortDefinition[1]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiEDWDataDictionary() {
         given()
                 .when()
@@ -65,7 +70,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[2]", equalTo("EDW Data Dictionary"))
                 .assertThat().body("ShortDefinition[2]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiFinanceTerms() {
         given()
                 .when()
@@ -76,7 +82,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[3]", equalTo("Finance Terms"))
                 .assertThat().body("ShortDefinition[3]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiGraduateSchoolTerms() {
         given()
                 .when()
@@ -87,7 +94,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[4]", equalTo("Graduate School Terms"))
                 .assertThat().body("ShortDefinition[4]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiHRPayrollTerms() {
         given()
                 .when()
@@ -98,7 +106,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[5]", equalTo("HR/Payroll Terms"))
                 .assertThat().body("ShortDefinition[5]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiInformationManagementTerms() {
         given()
                 .when()
@@ -109,7 +118,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[7]", equalTo("Information Management Terms"))
                 .assertThat().body("ShortDefinition[7]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiIPEDS() {
         given()
                 .when()
@@ -120,7 +130,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[8]", equalTo("IPEDS"))
                 .assertThat().body("ShortDefinition[8]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiMyFD() {
         given()
                 .when()
@@ -131,7 +142,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[10]", equalTo("MyFD"))
                 .assertThat().body("ShortDefinition[10]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiResearchAdministrationTerms() {
         given()
                 .when()
@@ -142,7 +154,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[11]", equalTo("Research Administration Terms"))
                 .assertThat().body("ShortDefinition[11]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiStudentDataTerms() {
         given()
                 .when()
@@ -153,7 +166,8 @@ public class API_KN_GlossaryTest {
                 .assertThat().body("Title[12]", equalTo("Student Data Terms"))
                 .assertThat().body("ShortDefinition[12]", IsNull.notNullValue());
     }
-    @Test
+
+    @Test(priority = 2)
     public void apiUniversityAdvancementTerms() {
         given()
                 .when()

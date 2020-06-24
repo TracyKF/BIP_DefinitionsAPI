@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
   <test thread-count="5" name="C:/GitHub/DefinitionsAPI(failed)">
     <classes>
-      <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest">
+      <class name="restAssuredDefinitionsAPITest.API_KN_GlossaryTest">
         <methods>
-          <include name="apiReportsAllCountTest"/>
+          <include name="apiStatusCode200"/>
         </methods>
-      </class> <!-- restAssuredDefinitionsAPITest.API_ReportsAllTest -->
+      </class> <!-- restAssuredDefinitionsAPITest.API_KN_GlossaryTest -->
     </classes>
   </test> <!-- C:/GitHub/DefinitionsAPI(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
