@@ -138,9 +138,9 @@ public class API_KN_GlossaryTest {
                 .get("https://metadata.uw.edu/KNApi/List/Glossary")
                 .then()
                 .statusCode(200)
-                .assertThat().body("Uid[10]", equalTo("myfd"))
-                .assertThat().body("Title[10]", equalTo("MyFD"))
-                .assertThat().body("ShortDefinition[10]", IsNull.notNullValue());
+                .assertThat().body("Uid[9]", equalTo("myfd"))
+                .assertThat().body("Title[9]", equalTo("MyFD"))
+                .assertThat().body("ShortDefinition[9]", IsNull.notNullValue());
     }
 
     @Test(priority = 2)
@@ -150,9 +150,9 @@ public class API_KN_GlossaryTest {
                 .get("https://metadata.uw.edu/KNApi/List/Glossary")
                 .then()
                 .statusCode(200)
-                .assertThat().body("Uid[11]", equalTo("63701908-78c3-451a-a9b6-ac4d2ff1112d"))
-                .assertThat().body("Title[11]", equalTo("Research Administration Terms"))
-                .assertThat().body("ShortDefinition[11]", IsNull.notNullValue());
+                .assertThat().body("Uid[10]", equalTo("63701908-78c3-451a-a9b6-ac4d2ff1112d"))
+                .assertThat().body("Title[10]", equalTo("Research Administration Terms"))
+                .assertThat().body("ShortDefinition[10]", IsNull.notNullValue());
     }
 
     @Test(priority = 2)
@@ -162,9 +162,9 @@ public class API_KN_GlossaryTest {
                 .get("https://metadata.uw.edu/KNApi/List/Glossary")
                 .then()
                 .statusCode(200)
-                .assertThat().body("Uid[12]", equalTo("studentdata"))
-                .assertThat().body("Title[12]", equalTo("Student Data Terms"))
-                .assertThat().body("ShortDefinition[12]", IsNull.notNullValue());
+                .assertThat().body("Uid[11]", equalTo("studentdata"))
+                .assertThat().body("Title[11]", equalTo("Student Data Terms"))
+                .assertThat().body("ShortDefinition[11]", IsNull.notNullValue());
     }
 
     @Test(priority = 2)
@@ -174,9 +174,9 @@ public class API_KN_GlossaryTest {
                 .get("https://metadata.uw.edu/KNApi/List/Glossary")
                 .then()
                 .statusCode(200)
-                .assertThat().body("Uid[13]", equalTo("366c77d3-f5c2-483b-8e2f-8cc86d93d314"))
-                .assertThat().body("Title[13]", equalTo("University Advancement Terms"))
-                .assertThat().body("ShortDefinition[13]", IsNull.notNullValue());
+                .assertThat().body("Uid[12]", equalTo("366c77d3-f5c2-483b-8e2f-8cc86d93d314"))
+                .assertThat().body("Title[12]", equalTo("University Advancement Terms"))
+                .assertThat().body("ShortDefinition[12]", IsNull.notNullValue());
     }
     // Template
 /*    @Test

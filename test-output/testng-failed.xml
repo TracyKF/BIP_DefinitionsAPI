@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
-  <test thread-count="5" name="C:/GitHub/DefinitionsAPI(failed)">
+  <test thread-count="5" name="C:/GitHub_UW/BIP_DefinitionsAPI(failed)">
     <classes>
+      <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest_Refactored">
+        <methods>
+          <include name="apiCurrentStudentInformationByMajor"/>
+          <include name="doGetRequest"/>
+        </methods>
+      </class> <!-- restAssuredDefinitionsAPITest.API_ReportsAllTest_Refactored -->
       <class name="restAssuredDefinitionsAPITest.API_KN_GlossaryTest">
         <methods>
-          <include name="apiStatusCode200"/>
+          <include name="apiMyFD"/>
+          <include name="apiResearchAdministrationTerms"/>
+          <include name="apiStudentDataTerms"/>
+          <include name="apiUniversityAdvancementTerms"/>
         </methods>
       </class> <!-- restAssuredDefinitionsAPITest.API_KN_GlossaryTest -->
+      <class name="restAssuredDefinitionsAPITest.API_ReportTermsTest">
+        <methods>
+          <include name="getBaseURI"/>
+          <include name="CurrentStudentInformationByMajor"/>
+        </methods>
+      </class> <!-- restAssuredDefinitionsAPITest.API_ReportTermsTest -->
     </classes>
-  </test> <!-- C:/GitHub/DefinitionsAPI(failed) -->
+  </test> <!-- C:/GitHub_UW/BIP_DefinitionsAPI(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
