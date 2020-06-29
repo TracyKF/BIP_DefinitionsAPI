@@ -71,7 +71,6 @@ public class API_ReportsAllTest_Refactored {
                         path("list.size()");
         Assert.assertEquals(sizeOfList, reportCount);
         // TODO - QUESTION:  What best? Having a variable declared outside of the Test method or left inside?
-        Assert.assertEquals(sizeOfList, reportCount);
     }
 
     // ******************************************** REFACTORED PART ****************

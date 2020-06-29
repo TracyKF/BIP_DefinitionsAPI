@@ -15,6 +15,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class API_KN_GlossaryTest {
 
+    int groupCount = 13;
+
     // Site tests
     @Test(priority = 1)
     public void apiStatusCode200() {
@@ -32,6 +34,18 @@ public class API_KN_GlossaryTest {
     public void apiStatusCodeNot500() {
         int code = get("https://metadata.uw.edu/KNApi/List/Glossary").getStatusCode();
         Assert.assertNotEquals(code, 500);
+    }
+
+    @Test (priority = 02)
+    public void apiGroupCount(){
+        int sizeOfList =
+                when()
+                        .get("https://metadata.uw.edu/KNApi/List/Glossary")
+                        .then()
+                        .extract().
+                        path("list.size()");
+        Assert.assertEquals(sizeOfList, groupCount);
+        // TODO - QUESTION:  What best? Having a variable declared outside of the Test method or left inside?
     }
 
     // Section tests
