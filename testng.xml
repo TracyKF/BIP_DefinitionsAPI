@@ -8,6 +8,7 @@
                     <include name="apiStatusCode200"/>
                     <include name="apiStatusCodeNot404"/>
                     <include name="apiStatusCodeNot500"/>
+                    <include name="apiGroupCount"/>
                     <include name="apiAcademicPersonnelReportingTerms"/>
                     <include name="apiCommonDataSet"/>
                     <include name="apiEDWDataDictionary"/>
