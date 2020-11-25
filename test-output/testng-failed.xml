@@ -9,14 +9,6 @@
           <include name="doGetRequest"/>
         </methods>
       </class> <!-- restAssuredDefinitionsAPITest.API_ReportsAllTest_Refactored -->
-      <class name="restAssuredDefinitionsAPITest.API_KN_GlossaryTest">
-        <methods>
-          <include name="apiMyFD"/>
-          <include name="apiResearchAdministrationTerms"/>
-          <include name="apiStudentDataTerms"/>
-          <include name="apiUniversityAdvancementTerms"/>
-        </methods>
-      </class> <!-- restAssuredDefinitionsAPITest.API_KN_GlossaryTest -->
       <class name="restAssuredDefinitionsAPITest.API_ReportTermsTest">
         <methods>
           <include name="getBaseURI"/>

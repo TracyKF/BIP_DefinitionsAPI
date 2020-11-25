@@ -15,7 +15,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class API_KN_GlossaryTest {
 
-    int groupCount = 13;
+    int groupCount = 14;
 
     // Site tests
     @Test(priority = 1)
