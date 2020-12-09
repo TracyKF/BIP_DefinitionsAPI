@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 106;
+    int reportCount = 105;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -1270,7 +1270,8 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+    // Archived: 12/3/2020 12:23 PM
+/*    @Test
     public void apiMyFDExpenseTransferVolumeReport() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -1283,7 +1284,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "MyFD Expense Transfer Volume Report", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiNSFCompensationbyFiscalYear() {
