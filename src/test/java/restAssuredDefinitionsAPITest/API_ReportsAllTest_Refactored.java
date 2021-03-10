@@ -42,7 +42,7 @@ public class API_ReportsAllTest_Refactored {
                         .when().get("https://metadata.uw.edu/api/reports/all")
                         .then().statusCode(200).and().contentType(ContentType.JSON).extract().response();
     }
-/*
+
     @Test(priority = 1)
     public void apiStatusCode200() {
         int code = get("https://metadata.uw.edu/api/reports/all").getStatusCode();
@@ -71,7 +71,7 @@ public class API_ReportsAllTest_Refactored {
                         path("list.size()");
         Assert.assertEquals(sizeOfList, reportCount);
         // TODO - QUESTION:  What best? Having a variable declared outside of the Test method or left inside?
-    }*/
+    }
 
     // ******************************************** REFACTORED PART ****************
     // Method to store the Key and Value for Uid and Title in Map.
@@ -613,7 +613,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiFacultyEffortCertification() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -626,7 +626,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Faculty Effort Certification (FEC) Dashboard", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiFASBatchSummaryReport() {
@@ -658,7 +658,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiFECDashboardReportbyFECCycle() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -671,9 +671,9 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "FEC Dashboard Report by FEC Cycle", "Report Title not found.");
             }
         }
-    }
+    }*/
 
-    @Test
+/*    @Test
     public void apiFECDashboardReportbyOrgCode() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -686,7 +686,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "FEC Dashboard Report by OrgCode", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFunction() {
@@ -702,7 +702,7 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-
+/*
     @Test
     public void apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFundingSource() {
         Map<String, String> pairs;
@@ -716,7 +716,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Fiscal Year Income and Expense Summary by OrgCode and Funding Source", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiForecastingTemplatebyFiscalYearandOrgCode() {
@@ -1343,7 +1343,7 @@ public class API_ReportsAllTest_Refactored {
                 String value = (String) pairEntry.getValue();
                 String key = (String) pairEntry.getKey();
                 System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Satisfactory Progress Policy Report", "Report Title not found.");
+                assertEquals(value, "Satisfactory Progress Policy List", "Report Title not found.");
             }
         }
     }
