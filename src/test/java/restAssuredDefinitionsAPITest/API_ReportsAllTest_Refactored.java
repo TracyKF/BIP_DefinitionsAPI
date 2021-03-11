@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 103;
+    int reportCount = 102;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -118,20 +118,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
-    public void apiAdvanceBudgetNumberReport() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("f93c0249-c281-45de-b574-865736dc928e"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("f93c0249-c281-45de-b574-865736dc928e")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Advance Budget Number Report", "Report Title not found.");
-            }
-        }
-    }
 
     @Test
     public void apiAffixedPaymentDetail() {
@@ -613,21 +599,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-/*    @Test
-    public void apiFacultyEffortCertification() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("38e46e79-1f00-4a0b-a20c-f87f29e5e8a4"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("38e46e79-1f00-4a0b-a20c-f87f29e5e8a4")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Faculty Effort Certification (FEC) Dashboard", "Report Title not found.");
-            }
-        }
-    }*/
-
     @Test
     public void apiFASBatchSummaryReport() {
         Map<String, String> pairs;
@@ -658,36 +629,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-/*    @Test
-    public void apiFECDashboardReportbyFECCycle() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("ebe0b73a-8442-46dc-bf75-682b82b690d9"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("ebe0b73a-8442-46dc-bf75-682b82b690d9")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "FEC Dashboard Report by FEC Cycle", "Report Title not found.");
-            }
-        }
-    }*/
-
-/*    @Test
-    public void apiFECDashboardReportbyOrgCode() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("ffda88cc-146f-4de0-87e2-e47d0d690003"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("ffda88cc-146f-4de0-87e2-e47d0d690003")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "FEC Dashboard Report by OrgCode", "Report Title not found.");
-            }
-        }
-    }*/
-
     @Test
     public void apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFunction() {
         Map<String, String> pairs;
@@ -702,21 +643,6 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-/*
-    @Test
-    public void apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFundingSource() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("dc087820-0962-467d-b399-c6dd65b7143d"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("dc087820-0962-467d-b399-c6dd65b7143d")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Fiscal Year Income and Expense Summary by OrgCode and Funding Source", "Report Title not found.");
-            }
-        }
-    }*/
 
     @Test
     public void apiForecastingTemplatebyFiscalYearandOrgCode() {
@@ -1647,7 +1573,7 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-
+    
     /*    TEMPLATE
 @Test
     public void apiXXX() {
@@ -1664,8 +1590,6 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }*/
-
-
 }
 
 
