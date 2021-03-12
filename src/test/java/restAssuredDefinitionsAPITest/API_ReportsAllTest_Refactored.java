@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 102;
+    int reportCount = 101;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -625,21 +625,6 @@ public class API_ReportsAllTest_Refactored {
                 String key = (String) pairEntry.getKey();
                 System.out.println(key + ":  " + pairEntry.getValue());
                 assertEquals(value, "FEC Dashboard Action List", "Report Title not found.");
-            }
-        }
-    }
-
-    @Test
-    public void apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFunction() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("84ea1a9c-75ed-4f61-9352-29b93fd12841"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("84ea1a9c-75ed-4f61-9352-29b93fd12841")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Fiscal Year Income and Expense Summary by OrgCode and Function", "Report Title not found.");
             }
         }
     }
