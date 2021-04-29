@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/GitHub_UW/BIP_DefinitionsAPI">
+    <test verbose="2" preserve-order="true"
+          name="C:/GitHub_UW/BIP_DefinitionsAPI/src/test/java/restAssuredDefinitionsAPITest/API_ReportsAllTest_Refactored.java">
         <classes>
-            <class name="restAssuredDefinitionsAPITest.API_KN_GlossaryTest">
-                <methods>
-                    <include name="apiStatusCode200"/>
-                    <include name="apiStatusCodeNot404"/>
-                    <include name="apiStatusCodeNot500"/>
-                    <include name="apiGroupCount"/>
-                    <include name="apiAcademicPersonnelReportingTerms"/>
-                    <include name="apiCommonDataSet"/>
-                    <include name="apiEDWDataDictionary"/>
-                    <include name="apiFinanceTerms"/>
-                    <include name="apiGraduateSchoolTerms"/>
-                    <include name="apiHRPayrollTerms"/>
-                    <include name="apiInformationManagementTerms"/>
-                    <include name="apiIPEDS"/>
-                    <include name="apiMyFD"/>
-                    <include name="apiResearchAdministrationTerms"/>
-                    <include name="apiStudentDataTerms"/>
-                    <include name="apiUniversityAdvancementTerms"/>
-                </methods>
-            </class>
             <class name="restAssuredDefinitionsAPITest.API_ReportsAllTest_Refactored">
                 <methods>
                     <include name="apiStatusCode200"/>
@@ -30,7 +11,6 @@
                     <include name="apiStatusCodeNot500"/>
                     <include name="apiReportsAllCount"/>
                     <include name="api100PercentSponsorFundedFaculty"/>
-                    <include name="apiAdvanceBudgetNumberReport"/>
                     <include name="apiAffixedPaymentDetail"/>
                     <include name="apiAidAuthorizedandDisbursedbyYear"/>
                     <include name="apiAidAuthorizedandDisbursedbyQuarter"/>
@@ -38,12 +18,8 @@
                     <include name="apiBienniumToDateBudgetBalances"/>
                     <include name="apiBudgetSummaryByOrgCode"/>
                     <include name="apiBudgetTypeClassMatrix"/>
-                    <include name="apiBuildingSummarybyOrgCode"/>
-                    <include name="apiBuildingSummarybyPrimaryUse"/>
                     <include name="apiCampusApplicationCountsComparison"/>
                     <include name="apiClassListByCurriculumCourseSection"/>
-                    <include name="apiCollegeSpaceDatabyFacility"/>
-                    <include name="apiCollegeSpaceDatabyOrgCode"/>
                     <include name="apiConsolidatedBudgetStatusReportMenu"/>
                     <include name="apiContactInformationForUnmetRequest"/>
                     <include name="apiCostShareCommitmentsandContributions"/>
@@ -61,15 +37,8 @@
                     <include name="apiDegreeCodes"/>
                     <include name="apieFECSEffortReportingRetroactiveSalaryAdjustmentReport"/>
                     <include name="apiExpenseandRevenueTransferReport"/>
-                    <include name="apiFacilityInformation"/>
-                    <include name="apiFacilityRoomDetail"/>
-                    <include name="apiFacultyEffortCertification"/>
                     <include name="apiFASBatchSummaryReport"/>
                     <include name="apiFECDashboardActionList"/>
-                    <include name="apiFECDashboardReportbyFECCycle"/>
-                    <include name="apiFECDashboardReportbyOrgCode"/>
-                    <include name="apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFunction"/>
-                    <include name="apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFundingSource"/>
                     <include name="apiForecastingTemplatebyFiscalYearandOrgCode"/>
                     <include name="apiFreshmanApplicationsScoresandEthnicity"/>
                     <include name="apiAgencyFunds"/>
@@ -80,7 +49,6 @@
                     <include name="apiGLTransactionsbyMonth"/>
                     <include name="apiGrantandContractBudgetStatusReport"/>
                     <include name="apiGrantandContractDeficitReport"/>
-                    <include name="apiGrantandGiftBudgetsUnassignedtoSpace"/>
                     <include name="apiHowManyCreditHoursByCollege"/>
                     <include name="apiHowManyDegreesByCollege"/>
                     <include name="apiHowManyStudentsUniversity"/>
@@ -108,13 +76,11 @@
                     <include name="apiResearchProposalDetails"/>
                     <include name="apiResearchProposals"/>
                     <include name="apiResearchSubawards"/>
-                    <include name="apiRoomAssignmentDetailsbyDepartment"/>
                     <include name="apiSalaryandWageExpenseDetail"/>
                     <include name="apiSalaryCapCostShareReport"/>
                     <include name="apiSatisfactoryProgressPolicyReport"/>
                     <include name="apiSEVISImmigrationReporting"/>
                     <include name="apiSMATHistory"/>
-                    <include name="apiSpaceDatabyDepartment"/>
                     <include name="apiStudentDegreeInformation"/>
                     <include name="apiStudentGradeReportbyCourse"/>
                     <include name="apiStudentGradeReportbyMajor"/>
@@ -132,6 +98,7 @@
                     <include name="apiWhoHasAccess"/>
                     <include name="apiEmployeeHistorySummaryReport"/>
                     <include name="apiGrantandContractCertificationReport"/>
+                    <include name="apiXXX"/>
                 </methods>
             </class>
         </classes>
