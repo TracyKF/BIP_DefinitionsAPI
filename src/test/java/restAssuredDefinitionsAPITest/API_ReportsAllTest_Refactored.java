@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 101;
+    int reportCount = 93;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -224,7 +224,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiBuildingSummarybyOrgCode() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -237,9 +237,9 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Building Summary by OrgCode", "Report Title not found.");
             }
         }
-    }
+    }*/
 
-    @Test
+/*    @Test
     public void apiBuildingSummarybyPrimaryUse() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -252,7 +252,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Building Summary by Primary Use", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiCampusApplicationCountsComparison() {
@@ -284,7 +284,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiCollegeSpaceDatabyFacility() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -297,9 +297,9 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "College Space Data by Facility", "Report Title not found.");
             }
         }
-    }
+    }*/
 
-    @Test
+/*    @Test
     public void apiCollegeSpaceDatabyOrgCode() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -312,7 +312,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "College Space Data by OrgCode", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiConsolidatedBudgetStatusReportMenu() {
@@ -569,7 +569,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiFacilityInformation() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -582,9 +582,9 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Facility Information", "Report Title not found.");
             }
         }
-    }
+    }*/
 
-    @Test
+/*    @Test
     public void apiFacilityRoomDetail() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -597,7 +597,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Facility Room Detail", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiFASBatchSummaryReport() {
@@ -779,7 +779,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiGrantandGiftBudgetsUnassignedtoSpace() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -792,7 +792,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Grant and Gift Budgets Unassigned to Space", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiHowManyCreditHoursByCollege() {
@@ -1199,7 +1199,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiRoomAssignmentDetailsbyDepartment() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -1212,7 +1212,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Room Assignment Details by Department", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiSalaryandWageExpenseDetail() {
@@ -1289,7 +1289,7 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-    @Test
+/*    @Test
     public void apiSpaceDatabyDepartment() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -1302,7 +1302,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Space Data by Department", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiStudentDegreeInformation() {
