@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 93;
+    int reportCount = 92;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -314,7 +314,8 @@ public class API_ReportsAllTest_Refactored {
         }
     }*/
 
-    @Test
+    // This report archived: ERA-2779 - May 25th 2021
+/*    @Test
     public void apiConsolidatedBudgetStatusReportMenu() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
@@ -327,7 +328,7 @@ public class API_ReportsAllTest_Refactored {
                 assertEquals(value, "Consolidated Budget Status Report Menu", "Report Title not found.");
             }
         }
-    }
+    }*/
 
     @Test
     public void apiContactInformationForUnmetRequest() {

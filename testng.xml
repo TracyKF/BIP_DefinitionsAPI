@@ -20,14 +20,13 @@
                     <include name="apiBudgetTypeClassMatrix"/>
                     <include name="apiCampusApplicationCountsComparison"/>
                     <include name="apiClassListByCurriculumCourseSection"/>
-                    <include name="apiConsolidatedBudgetStatusReportMenu"/>
                     <include name="apiContactInformationForUnmetRequest"/>
                     <include name="apiCostShareCommitmentsandContributions"/>
                     <include name="apiCourseSectionFillRates"/>
                     <include name="apiCurrentApplicationCountbyDepartmentandMajor"/>
                     <include name="apiCurrentStudentInformation"/>
                     <include name="apiCurrentStudentRegistrationCourses"/>
-                    <include name="apiCurrentStudentTranscriptCourses"/>
+                    <include name="apiCurrentStudentTrContactInformationForUnmetRequestanscriptCourses"/>
                     <include name="apiCurrentStudentTranscriptQuarterlySummary"/>
                     <include name="apiCurrentStudentTransferSummary"/>
                     <include name="apiCurriculumCodes"/>
