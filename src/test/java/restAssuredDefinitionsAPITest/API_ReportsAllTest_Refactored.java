@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 92;
+    int reportCount = 93;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -90,8 +90,8 @@ public class API_ReportsAllTest_Refactored {
             String titleString = obj.get("Title").getAsString();
 
             //populates Map with actual values.
-            uIDTitleValues.put(uidString, titleString);
-            //System.out.println(uIDTitleValues.put(uidString, titleString));
+/*            uIDTitleValues.put(uidString, titleString);
+            System.out.println(uIDTitleValues.put(uidString, titleString));*/
         }
         return uIDTitleValues;
     }
@@ -117,7 +117,6 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-
 
     @Test
     public void apiAffixedPaymentDetail() {
@@ -224,36 +223,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-/*    @Test
-    public void apiBuildingSummarybyOrgCode() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("a83e106e-f939-4784-ae4b-6ceb838c479a"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("a83e106e-f939-4784-ae4b-6ceb838c479a")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Building Summary by OrgCode", "Report Title not found.");
-            }
-        }
-    }*/
-
-/*    @Test
-    public void apiBuildingSummarybyPrimaryUse() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("a150a1fa-dc43-413e-bb1d-903ca89c01fe"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("a150a1fa-dc43-413e-bb1d-903ca89c01fe")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Building Summary by Primary Use", "Report Title not found.");
-            }
-        }
-    }*/
-
     @Test
     public void apiCampusApplicationCountsComparison() {
         Map<String, String> pairs;
@@ -284,51 +253,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-/*    @Test
-    public void apiCollegeSpaceDatabyFacility() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("413ec093-3589-4380-85b4-64e849139493"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("413ec093-3589-4380-85b4-64e849139493")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "College Space Data by Facility", "Report Title not found.");
-            }
-        }
-    }*/
-
-/*    @Test
-    public void apiCollegeSpaceDatabyOrgCode() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("ac51b2f8-d0bb-4afb-9dab-9b5bd346a09b"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("ac51b2f8-d0bb-4afb-9dab-9b5bd346a09b")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "College Space Data by OrgCode", "Report Title not found.");
-            }
-        }
-    }*/
-
-    // This report archived: ERA-2779 - May 25th 2021
-/*    @Test
-    public void apiConsolidatedBudgetStatusReportMenu() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("e8378a86-41fe-4771-b9a1-24b99e431f3b"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("e8378a86-41fe-4771-b9a1-24b99e431f3b")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Consolidated Budget Status Report Menu", "Report Title not found.");
-            }
-        }
-    }*/
 
     @Test
     public void apiContactInformationForUnmetRequest() {
@@ -570,36 +494,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-/*    @Test
-    public void apiFacilityInformation() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("48835f63-ab79-40fc-bc99-4347a52d2324"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("48835f63-ab79-40fc-bc99-4347a52d2324")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Facility Information", "Report Title not found.");
-            }
-        }
-    }*/
-
-/*    @Test
-    public void apiFacilityRoomDetail() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("bf1e10f2-11d4-4179-9ec4-7dc5ffb6e59e"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("bf1e10f2-11d4-4179-9ec4-7dc5ffb6e59e")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Facility Room Detail", "Report Title not found.");
-            }
-        }
-    }*/
-
     @Test
     public void apiFASBatchSummaryReport() {
         Map<String, String> pairs;
@@ -779,21 +673,6 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-
-/*    @Test
-    public void apiGrantandGiftBudgetsUnassignedtoSpace() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("ad6c965a-e3d1-43e1-bf95-36255a3e20fd"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("ad6c965a-e3d1-43e1-bf95-36255a3e20fd")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Grant and Gift Budgets Unassigned to Space", "Report Title not found.");
-            }
-        }
-    }*/
 
     @Test
     public void apiHowManyCreditHoursByCollege() {
@@ -1200,21 +1079,6 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
-/*    @Test
-    public void apiRoomAssignmentDetailsbyDepartment() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("8e150b05-8678-48ba-bd6e-430de2b2acac"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("8e150b05-8678-48ba-bd6e-430de2b2acac")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Room Assignment Details by Department", "Report Title not found.");
-            }
-        }
-    }*/
-
     @Test
     public void apiSalaryandWageExpenseDetail() {
         Map<String, String> pairs;
@@ -1289,21 +1153,6 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-
-/*    @Test
-    public void apiSpaceDatabyDepartment() {
-        Map<String, String> pairs;
-        pairs = reportUIDsAndTitles();
-        assertTrue(pairs.containsKey("2117c782-13bf-4b6e-ba17-aff043712e0d"));
-        for (Map.Entry pairEntry : pairs.entrySet()) {
-            if (pairEntry.getKey().equals("2117c782-13bf-4b6e-ba17-aff043712e0d")) {
-                String value = (String) pairEntry.getValue();
-                String key = (String) pairEntry.getKey();
-                System.out.println(key + ":  " + pairEntry.getValue());
-                assertEquals(value, "Space Data by Department", "Report Title not found.");
-            }
-        }
-    }*/
 
     @Test
     public void apiStudentDegreeInformation() {
@@ -1559,7 +1408,97 @@ public class API_ReportsAllTest_Refactored {
             }
         }
     }
-    
+
+    @Test
+    public void apiAcademicScholarshipList() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("4aae4bb2-ac80-468a-81ce-206cf7084297"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("4aae4bb2-ac80-468a-81ce-206cf7084297")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                System.out.println(key + ":  " + pairEntry.getValue());
+                assertEquals(value, "Academic Scholarship List", "Report Title not found.");
+            }
+        }
+    }
+
+    @Test
+    public void apiConsolidatedBudgetStatusReportR1() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("fc62cbab-1124-43b4-8482-6a9434614ec4"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("fc62cbab-1124-43b4-8482-6a9434614ec4")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                System.out.println(key + ":  " + pairEntry.getValue());
+                assertEquals(value, "Budget Status by Organization Code", "Report Title not found.");
+            }
+        }
+    }
+
+    @Test
+    public void apiConsolidatedBudgetStatusReportR2() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("0f717129-7ec8-49c0-b0d2-0802ee60f144"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("0f717129-7ec8-49c0-b0d2-0802ee60f144")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                System.out.println(key + ":  " + pairEntry.getValue());
+                assertEquals(value, "Budget Status by Parent Budget or Grant", "Report Title not found.");
+            }
+        }
+    }
+
+    @Test
+    public void apiFacultyEffortCertificationFECSummary() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("38e46e79-1f00-4a0b-a20c-f87f29e5e8a4"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("38e46e79-1f00-4a0b-a20c-f87f29e5e8a4")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                System.out.println(key + ":  " + pairEntry.getValue());
+                assertEquals(value, "Faculty Effort Certification (FEC) Summary", "Report Title not found.");
+            }
+        }
+    }
+
+    @Test
+    public void apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFundingSource() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("dc087820-0962-467d-b399-c6dd65b7143d"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("dc087820-0962-467d-b399-c6dd65b7143d")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                System.out.println(key + ":  " + pairEntry.getValue());
+                assertEquals(value, "Fiscal Year Income and Expense Summary", "Report Title not found.");
+            }
+        }
+    }
+
+    @Test
+    public void apiResearchPIProposalsandAwards() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("03b25eb0-40c7-4b2e-abbe-2ccff17f93e6"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("03b25eb0-40c7-4b2e-abbe-2ccff17f93e6")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                System.out.println(key + ":  " + pairEntry.getValue());
+                assertEquals(value, "Principal Investigator Proposal and Award Search", "Report Title not found.");
+            }
+        }
+    }
+
     /*    TEMPLATE
 @Test
     public void apiXXX() {
