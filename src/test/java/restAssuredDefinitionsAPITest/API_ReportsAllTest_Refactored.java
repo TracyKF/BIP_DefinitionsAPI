@@ -90,8 +90,8 @@ public class API_ReportsAllTest_Refactored {
             String titleString = obj.get("Title").getAsString();
 
             //populates Map with actual values.
-/*            uIDTitleValues.put(uidString, titleString);
-            System.out.println(uIDTitleValues.put(uidString, titleString));*/
+            uIDTitleValues.put(uidString, titleString);
+           //System.out.println(uIDTitleValues.put(uidString, titleString));
         }
         return uIDTitleValues;
     }
