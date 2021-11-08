@@ -97,8 +97,8 @@
                     <include name="apiEmployeeHistorySummaryReport"/>
                     <include name="apiGrantandContractCertificationReport"/>
                     <include name="apiAcademicScholarshipList"/>
-                    <include name="apiConsolidatedBudgetStatusReportR1"/>
-                    <include name="apiConsolidatedBudgetStatusReportR2"/>
+                    <include name="apiBudgetStatusbyOrganizationCode"/>
+                    <include name="apiBudgetStatusbyParentBudgetorGrant"/>
                     <include name="apiFacultyEffortCertificationFECSummary"/>
                     <include name="apiFiscalYearIncomeandExpenseSummarybyOrgCodeandFundingSource"/>
                     <include name="apiResearchPIProposalsandAwards"/>

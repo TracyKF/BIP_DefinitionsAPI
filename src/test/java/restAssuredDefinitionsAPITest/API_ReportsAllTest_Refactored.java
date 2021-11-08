@@ -1425,7 +1425,7 @@ public class API_ReportsAllTest_Refactored {
     }
 
     @Test
-    public void apiConsolidatedBudgetStatusReportR1() {
+    public void apiBudgetStatusbyOrganizationCode() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
         assertTrue(pairs.containsKey("fc62cbab-1124-43b4-8482-6a9434614ec4"));
@@ -1440,7 +1440,7 @@ public class API_ReportsAllTest_Refactored {
     }
 
     @Test
-    public void apiConsolidatedBudgetStatusReportR2() {
+    public void apiBudgetStatusbyParentBudgetorGrant() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
         assertTrue(pairs.containsKey("0f717129-7ec8-49c0-b0d2-0802ee60f144"));
