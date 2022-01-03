@@ -32,7 +32,7 @@ import static org.testng.Assert.*;
 
 public class API_ReportsAllTest_Refactored {
 
-    int reportCount = 93;
+    int reportCount = 94;
 
     @BeforeClass
     public Response doGetRequest() {
@@ -1499,14 +1499,26 @@ public class API_ReportsAllTest_Refactored {
         }
     }
 
+    @Test
+    public void apiMyFDExpenseTransferVolumeReport() {
+        Map<String, String> pairs;
+        pairs = reportUIDsAndTitles();
+        assertTrue(pairs.containsKey("0209153e-4622-4eba-ac07-ee3b98c74f86"));
+        for (Map.Entry pairEntry : pairs.entrySet()) {
+            if (pairEntry.getKey().equals("0209153e-4622-4eba-ac07-ee3b98c74f86")) {
+                String value = (String) pairEntry.getValue();
+                String key = (String) pairEntry.getKey();
+                assertEquals(value, "MyFD Expense Transfer Volume Report", "Report Title not found.");
+            }
+        }
+    }
+
     /*    TEMPLATE
 @Test
     public void apiXXX() {
         Map<String, String> pairs;
         pairs = reportUIDsAndTitles();
         assertTrue(pairs.containsKey("123"));
-        assertTrue(pairs.containsKey("XXX"));
-
         for (Map.Entry pairEntry : pairs.entrySet()) {
             if (pairEntry.getKey().equals("XXX")) {
                 String value = (String) pairEntry.getValue();
